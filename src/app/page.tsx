@@ -5,6 +5,7 @@ import SpeechRecognitionComponent from "@/components/SpeechRecognition/SpeechRec
 import { cn } from "@/lib/utils";
 import React, { useState, ChangeEvent } from "react";
 import { IconVolume } from "@tabler/icons-react";
+import FileUpload from "@/components/InputArea/FileUpload"
 
 export default function Home() {
   //Define the state for sourceText
@@ -13,7 +14,9 @@ export default function Home() {
   const handleAudioPlayback = (text: string) => {
     const utterance = new SpeechSynthesisUtterance(text);
     window.speechSynthesis.speak(utterance);
-   }
+  };
+  
+  
 
   return (
     <div className="relative flex h-[50rem] w-full items-center justify-center bg-white dark:bg-black">
@@ -54,10 +57,12 @@ export default function Home() {
                       <SpeechRecognitionComponent
                         setSourceText={setSourceText}
                       />
-                      <IconVolume size={22}
+                      <IconVolume
+                        size={22}
                         onClick={() => handleAudioPlayback(sourceText)}
                       />
                       {/*File upload component comes here */}
+                      <FileUpload handleFileUpload={handleFileUpload} />
                     </span>
                   </div>
                 </div>
