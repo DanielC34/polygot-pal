@@ -13,6 +13,7 @@
     "@tailwindcss/cli": "^4.0.17",
     "clsx": "^2.1.1",
     "dotenv": "^16.4.7",
+    "lodash.debounce": "^4.0.8",
     "motion": "^12.6.2",
     "next": "15.2.4",
     "openai": "^4.91.1",
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/lodash.debounce": "^4.0.9",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

@@ -5,7 +5,7 @@ dotenv.config();
 
 const nextConfig: NextConfig = {
   /* config options here */
-  eng: {
+  env: {
     OPENAI_API_KEY: process.env.OPENAI_API_KEY,
   },
 };
